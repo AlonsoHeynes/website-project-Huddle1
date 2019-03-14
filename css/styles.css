@@ -1,0 +1,161 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/** Global **/
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+}
+
+.content h1 {
+  padding: 0 35px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1.7rem;
+  color: #ffffff;
+}
+
+.content p {
+  padding: 0 30px;
+  color: #ffffff;
+}
+
+.container {
+  background-color: hsl(257, 40%, 49%);
+  background-image: url(../images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  padding: 20px;
+  min-width: 375px;
+}
+
+.logotype img {
+  width: 40%;
+  padding: 20px 0;
+}
+
+/** Illustration **/
+.illustration img {
+  width: 100%;
+}
+
+
+/** Right content **/
+section {
+  text-align: center;
+  padding-top: 20px;
+}
+
+button {
+  background-color: #ffffff;
+  color: hsl(257, 40%, 49%);
+  padding: 10px 60px;
+  border: none;
+  border-radius: 17px;
+  font-family: sans-serif;
+  margin: 15px 0 50px;
+}
+
+nav {
+  margin: 40px 0;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  padding: 6px;
+}
+
+nav a:last-of-type {
+  margin-right: 0;
+}
+
+nav a i {
+  width: 24px;
+  height: 24px;
+}
+
+
+/** Media queries **/
+@media only screen and (min-width: 376px) {
+  .container {
+    max-width: 1440px;
+    background-image: url(../images/bg-desktop.svg);
+    background-size: cover;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    overflow: auto;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .logotype img {
+    width: unset;
+    margin-bottom: 40px;
+  }
+
+  header {
+    float: left;
+    width: 55%;
+  }
+
+  section {
+    float: right;
+    width: 45%;
+    padding-top: 170px;
+  }
+
+  .content {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 0;
+  }
+
+  .content p {
+    font-size: 1rem;
+    line-height: 2;
+    padding: 0;
+  }
+
+  button {
+    margin: 10px 0;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  nav {
+    margin-top: 210px;
+    text-align: right;
+  }
+
+  nav a i {
+    text-align: center;
+  }
+}
+
+
+/** Frontend mentor attribution **/
+.attribution {
+  font-size: 11px; text-align: center;
+ }
+ 
+.attribution a {
+   color: hsl(228, 45%, 44%);
+ }
